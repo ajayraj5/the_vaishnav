@@ -1,0 +1,29 @@
+
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<h2 class="text-success">{{ doc.item }}</h2>
+
+<div>
+    <h3>Product Details</h3>
+    <ul>
+        <li>Item Name:{{doc.item}}</li>
+        <li><b>Price: {{doc.get_formatted("price")}}</b></li>
+    </ul>
+    <br>
+    <br>
+
+    <div class="border: 2px solid gray; border-radius: 5px; padding: 10px; margin-bottom: 10px;">
+        {{doc.description}}
+    </div>
+
+    <br>
+    <br>
+
+    <a href="/purchase-product/new?product={{doc.name}}" style="border: none; border-radius:5px; padding:10px 20px; color: white; background-color:rgb(0, 153, 255);">Buy NOW</a>
+</div>
+{% endblock %}
+
+
+
+<!-- this is a sample default web page template -->

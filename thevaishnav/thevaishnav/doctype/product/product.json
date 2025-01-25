@@ -1,0 +1,99 @@
+{
+ "actions": [],
+ "allow_guest_to_view": 1,
+ "allow_rename": 1,
+ "creation": "2025-01-25 14:29:11.398849",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_1jpc",
+  "item",
+  "img",
+  "price",
+  "column_break_ajtu",
+  "is_published",
+  "route",
+  "section_break_bwdl",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_1jpc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ajtu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "is published"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "route"
+  },
+  {
+   "fieldname": "section_break_bwdl",
+   "fieldtype": "Section Break",
+   "label": "Departure Details"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "item.description",
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "img",
+   "fieldtype": "Attach Image",
+   "label": "img"
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "label": "Price"
+  }
+ ],
+ "has_web_view": 1,
+ "image_field": "img",
+ "index_web_pages_for_search": 1,
+ "is_published_field": "is_published",
+ "links": [],
+ "modified": "2025-01-25 14:53:06.453309",
+ "modified_by": "Administrator",
+ "module": "TheVaishnav",
+ "name": "Product",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "route": "products",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
